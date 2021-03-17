@@ -10,21 +10,18 @@ export const app = {
     const click = new Game();
     const keys = new Keyboard();
     const end = new EndGame();
-    
+
     keys.generate();
 
     word
       .loadJson()
       .then(() => word.selectWord())
-      .then(res => end.getWord(res))
+      .then((res) => end.getWord(res))
       .then((res) => click.clickOnLetter(res))
-      
       .catch((err) => {
         throw Error("Doesn't work " + err);
       });
-      
   },
 };
 
 app.init();
-

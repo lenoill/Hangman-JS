@@ -13,21 +13,19 @@ export class EndGame {
         if (winLose === "WIN") {
           result.textContent = "You won!";
           endScreen.style.display = "initial";
+          this.retry();
         } else if (winLose === "LOST") {
           result.textContent = `The answer was ${word.toUpperCase()}`;
           endScreen.style.display = "initial";
+          this.retry();
         }
-        const retry = document.querySelector(".retry");
-        retry.addEventListener("click", () => {
-          //need reset keyboard hangman et dash
-          keyboard.innerHTML = "";
-          hangman.src = "images/hangman0.gif";
-          dash.forEach((item) => {
-            item.innerHTML = "";
+        
+        
+      }
+      retry(){
+        document.querySelector(".retry").addEventListener("click", () => {
+            location.reload();
           });
-          //reload the app
-          app.init();
-          endScreen.style.display = "none";
-        });
       }
 }
+/*après deux retry, le jeu génère deux noms de pokémons diférrents ajoute autant de dash que dans les deux noms */

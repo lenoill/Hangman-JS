@@ -16,9 +16,10 @@ export class GenerateWord {
     });
   }
   selectWord() {
-    const randomPkmn = Math.floor(Math.random() * 387);
-    // problem woth the "-" of nidoran and mime
-    this.word = this.data.results[randomPkmn].name.replace("-","");
+    const randomPkmn = Math.floor(Math.random() * 386);
+    // problem woth the "-" of nidoran and mime or remove 2 from porygon2
+    this.word = this.data.results[randomPkmn].name.split("-")[0];
+    this.word = this.word.replace('2','');
     const content = document.querySelector(".dashes");
     this.word.split("").map((item, index) => {
       content.innerHTML += `<div class="dash nbr${index}">_</div>`;
