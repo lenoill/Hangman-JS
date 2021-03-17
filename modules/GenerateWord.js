@@ -16,14 +16,17 @@ export class GenerateWord {
     });
   }
   selectWord() {
-    const randomPkmn = Math.floor(Math.random() * 387);
+    const randomPkmn = 28;
+    this.word = this.data.results[randomPkmn].name.replace("-","");
     const content = document.querySelector(".dashes");
-    this.data.results[randomPkmn].name.split("").map((item, index) => {
+    this.word.split("").map((item, index) => {
       content.innerHTML += `<div class="dash nbr${index}">_</div>`;
     });
+    // problem woth the "-" of nidoran and mime
+    
+
     //cheat
-    console.log(this.data.results[randomPkmn].name);
-    this.word = this.data.results[randomPkmn].name;
-    return this.data.results[randomPkmn].name;
+    console.log(this.word);
+    return this.word;
   }
 }
