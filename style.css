@@ -1,0 +1,71 @@
+html {
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body{
+    margin: 0;
+    background-color: rgb(145, 145, 145);
+    font-family: cursive;
+    text-align: center;
+}
+.dashes{
+    display: flex;
+    justify-content: center;
+    margin: 1em;
+}
+.dashes div{
+    display: flex;
+    font-size: 2em;
+    font-weight: bold;
+    width: 2em;
+    height: 3em;
+    justify-content: center;
+    align-items: flex-end;
+}
+.btnLetter{
+    width: 2em;
+    height: 1.5em;
+    margin: 0.2em;
+    font-size: 2em;
+}
+.container{
+    padding-top: 2em;
+    max-width: 50%;
+    height: 80vh;
+    margin: 0 auto ;
+}
+.hangman{
+    max-width: 30vw;
+    max-height: 30vh;
+}
+.end-screen{
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.582);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+.pop-up{
+    position: fixed;
+    background-color: rgb(70, 95, 167);
+    width: 200px;
+    height: 120px;
+    top: calc(50% - (150px /2));
+    left: calc(50% - (200px /2));
+    border-radius: 1em;
+}
+.retry{
+    background-color: rgb(72, 72, 173);
+    color: whitesmoke;
+    font-weight: bold;
+    height: 3em;
+    width: 5em;
+    border-radius: 0.5em;
+}
+/* faire un media query sous 460px de largeur */
