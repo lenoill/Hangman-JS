@@ -23,7 +23,7 @@ export class GenerateWord {
     });
     //cheat
     console.log(this.data.results[randomPkmn].name);
-    
+    this.word = this.data.results[randomPkmn].name;
     return this.data.results[randomPkmn].name;
   }
 }

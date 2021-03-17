@@ -1,6 +1,5 @@
-import { app } from "./../main.js";
-import { result, endScreen, keyboard, hangman, dash } from "./config.js";
-
+import {EndGame} from "./EndGame.js"
+const endgame = new EndGame();
 export class Game {
   constructor() {
     this.count = 0;
@@ -37,7 +36,7 @@ export class Game {
             document
               .querySelectorAll(".btnLetter")
               .forEach((item) => (item.disabled = true));
-            this.gameEnd("WIN");
+              endgame.isWin("WIN");
           }
         } else {
           this.count++;
@@ -50,35 +49,12 @@ export class Game {
             document
               .querySelectorAll(".btnLetter")
               .forEach((item) => (item.disabled = true));
-            this.gameEnd("LOST");
+              endgame.isWin("LOST");
           }
         }
       });
     });
   }
-  gameEnd(winLose) {
-    if (winLose === "WIN") {
-      result.textContent = "You won!";
-      endScreen.style.display = "initial";
-      this.retry();
-    } else if (winLose === "LOST") {
-      result.textContent = "YOU DIED!";
-      endScreen.style.display = "initial";
-      this.retry();
-    }
-  }
-  retry() {
-    const retry = document.querySelector(".retry");
-    retry.addEventListener("click", () => {
-      //need reset keyboard hangman et dash
-      keyboard.innerHTML = "";
-      hangman.src = "images/hangman0.gif";
-      dash.forEach((item) => {
-        item.innerHTML = "";
-      });
-      //reload the app
-      app.init();
-      endScreen.style.display = "none";
-    });
-  }
+  
+  
 }
