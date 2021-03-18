@@ -101,6 +101,7 @@ body {
 footer {
   position: absolute;
   bottom: 0px;
+  font-size: 0.75em;
 }
 .pkmn-image{
   height: 40%;
@@ -109,6 +110,7 @@ footer {
 @media only screen and (max-width: 620px) {
   .container {
     max-width: 100vw;
+    margin: 0em 0.5em;
   }
   .btnLetter {
     font-size: 1.5em;
