@@ -8,13 +8,14 @@ html {
 *:after {
   box-sizing: inherit;
 }
-/* @font-face{
-  font-family: '';
-} */
+@font-face{
+  font-family: 'PokemonGb-RAeo';
+  src: url('./font/PokemonGb-RAeo.ttf');
+}
 body {
   margin: 0;
   background-color: rgb(145, 145, 145);
-  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family:'PokemonGb-RAeo';
   text-align: center;
 }
 .dashes {
@@ -32,6 +33,7 @@ body {
   align-items: flex-end;
 }
 .btnLetter {
+  font-family:'PokemonGb-RAeo';
   width: 2em;
   height: 1.5em;
   margin: 0.2em;
@@ -71,7 +73,7 @@ body {
   border-radius: 1em;
 }
 .retry {
-  background-color: rgb(72, 72, 173);
+  background-color: rgb(173, 72, 72);
   color: whitesmoke;
   font-weight: bold;
   height: 3em;
