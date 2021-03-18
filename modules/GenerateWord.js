@@ -18,10 +18,7 @@ export class GenerateWord {
   }
   selectWord() {
     const randomPkmn = Math.floor(Math.random() * 386);
-    // const randomPkmn = 60;
     this.word = this.data.features[randomPkmn].name
-    // problem woth the "-" of nidoran and mime or remove 2 from porygon2
-    // this.word = this.word.split("-")[0];
     this.word = this.word.toLowerCase();
     this.word = this.word.replace('2','');
     this.word = this.word.replace('é','e');

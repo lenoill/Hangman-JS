@@ -1,4 +1,3 @@
-import { app } from "./../main.js";
 import { result, endScreen, keyboard, hangman, dash , imageUrl} from "./config.js";
 let word = "";
 let pkmnNumber = ""
@@ -31,4 +30,3 @@ export class EndGame {
           });
       }
 }
-/*après deux retry, le jeu génère deux noms de pokémons diférrents ajoute autant de dash que dans les deux noms */
