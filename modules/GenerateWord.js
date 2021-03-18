@@ -17,8 +17,8 @@ export class GenerateWord {
     });
   }
   selectWord() {
-    // const randomPkmn = Math.floor(Math.random() * 386);
-    const randomPkmn = 60;
+    const randomPkmn = Math.floor(Math.random() * 386);
+    // const randomPkmn = 60;
     this.word = this.data.features[randomPkmn].name
     // problem woth the "-" of nidoran and mime or remove 2 from porygon2
     // this.word = this.word.split("-")[0];
