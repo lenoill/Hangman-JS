@@ -7,6 +7,7 @@ export class GenerateWord {
   loadJson() {
     return new Promise((resolve, reject) => {
       fetch(this.url)
+        
         .then((res) => res.json())
         .then((res) => {
           this.data = res;
@@ -17,16 +18,24 @@ export class GenerateWord {
   }
   selectWord() {
     const randomPkmn = Math.floor(Math.random() * 386);
+    this.word = this.data.features[randomPkmn].name
     // problem woth the "-" of nidoran and mime or remove 2 from porygon2
-    this.word = this.data.results[randomPkmn].name.split("-")[0];
+    this.word = this.word.split("-")[0];
+    this.word = this.word.toLowerCase();
     this.word = this.word.replace('2','');
+    this.word = this.word.replace('é','e');
+    this.word = this.word.replace('è','e');
+    
     const content = document.querySelector(".dashes");
     this.word.split("").map((item, index) => {
-      content.innerHTML += `<div class="dash nbr${index}">_</div>`;
-    });
+      if(item == " "){
+        content.innerHTML += `<div class="dash nbr${index}"> </div>`;
+      }else{
+        content.innerHTML += `<div class="dash nbr${index}">_</div>`;
+      }
+      
+    });  
     
-    
-
     //cheat
     console.log(this.word);
     return [this.word, randomPkmn];

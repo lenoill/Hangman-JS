@@ -1,4 +1,4 @@
-const apiUrl = "https://pokeapi.co/api/v2/pokemon?limit=386";
+const apiUrl = "../pokemon_name.json";
 const imageUrl = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/"
 const keyboard = document.querySelector(".keyboard");
 const hangman = document.querySelector(".hangman");
