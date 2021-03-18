@@ -14,7 +14,7 @@ html {
 }
 body {
   margin: 0;
-  background-color: rgb(145, 145, 145);
+  background-color: rgb(85, 87, 78);
   font-family:'PokemonGb-RAeo';
   text-align: center;
 }
@@ -32,6 +32,21 @@ body {
   justify-content: center;
   align-items: flex-end;
 }
+.content{
+  background-color: rgba(121, 136, 54, 0.226);
+  border-style: double;
+  border-width: 7px;
+  border-radius: 1em;
+  border-color: rgb(0, 0, 0);
+  margin-bottom: 1em;
+}
+.keyboard{
+  background-color: rgba(121, 136, 54, 00.226);
+  border-style: double;
+  border-width: 7px;
+  border-radius: 1em;
+  border-color: rgb(0, 0, 0);
+}
 .btnLetter {
   font-family:'PokemonGb-RAeo';
   width: 2em;
@@ -40,10 +55,12 @@ body {
   font-size: 2em;
 }
 .container {
+  
   padding-top: 2em;
   max-width: 50%;
   height: 80vh;
   margin: 0 auto;
+  
 }
 .hangman {
   max-width: 30vw;
@@ -66,7 +83,7 @@ body {
   background-color: rgb(255, 255, 255);
   width: 200px;
   height: 250px;
-  top: calc(50% - (150px / 2));
+  top: calc(50% - (250px / 2));
   left: calc(50% - (200px / 2));
   border-style: double;
   border-width: 10px;
@@ -74,6 +91,7 @@ body {
 }
 .retry {
   background-color: rgb(173, 72, 72);
+  padding: 0.75em;
   color: whitesmoke;
   font-weight: bold;
   height: 3em;
