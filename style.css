@@ -8,6 +8,9 @@ html {
 *:after {
   box-sizing: inherit;
 }
+/* @font-face{
+  font-family: '';
+} */
 body {
   margin: 0;
   background-color: rgb(145, 145, 145);
@@ -54,12 +57,17 @@ body {
   left: 0px;
 }
 .pop-up {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   position: fixed;
-  background-color: rgb(70, 95, 167);
+  background-color: rgb(255, 255, 255);
   width: 200px;
-  height: 120px;
+  height: 250px;
   top: calc(50% - (150px / 2));
   left: calc(50% - (200px / 2));
+  border-style: double;
+  border-width: 10px;
   border-radius: 1em;
 }
 .retry {
@@ -73,6 +81,10 @@ body {
 footer {
   position: absolute;
   bottom: 0px;
+}
+.pkmn-image{
+  height: 40%;
+  margin: 1em;
 }
 @media only screen and (max-width: 620px) {
   .container {

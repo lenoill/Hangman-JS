@@ -29,6 +29,6 @@ export class GenerateWord {
 
     //cheat
     console.log(this.word);
-    return this.word;
+    return [this.word, randomPkmn];
   }
 }

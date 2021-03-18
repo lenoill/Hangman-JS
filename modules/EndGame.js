@@ -1,15 +1,18 @@
 import { app } from "./../main.js";
-import { result, endScreen, keyboard, hangman, dash } from "./config.js";
+import { result, endScreen, keyboard, hangman, dash , imageUrl} from "./config.js";
 let word = "";
+let pkmnNumber = ""
 
 export class EndGame {
     constructor(){
     }
-    getWord(value){
-        word = value;
-        return value;
+    getWord(pkmnName, pkmnNbr){
+        word = pkmnName;
+        pkmnNumber = pkmnNbr;
+        return pkmnName;
     }
     isWin(winLose) {
+        document.querySelector('.pkmn-image').src = `${imageUrl}${pkmnNumber+1}.svg`
         if (winLose === "WIN") {
           result.textContent = "You won!";
           endScreen.style.display = "initial";

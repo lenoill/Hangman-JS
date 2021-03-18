@@ -16,7 +16,7 @@ export const app = {
     word
       .loadJson()
       .then(() => word.selectWord())
-      .then((res) => end.getWord(res))
+      .then((res) => end.getWord(res[0],res[1]))
       .then((res) => click.clickOnLetter(res))
       .catch((err) => {
         throw Error("Doesn't work " + err);
